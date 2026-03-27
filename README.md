@@ -14,6 +14,7 @@ A comprehensive, premium web application built for managing organization members
 
 ## 🛠️ Technology Stack
 
+
 **Frontend:**
 - React 18 (with Hooks)
 - TypeScript

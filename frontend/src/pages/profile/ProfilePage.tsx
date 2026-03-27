@@ -47,11 +47,11 @@ const ProfilePage = () => {
     <div style={{ maxWidth: '600px', margin: '0 auto' }}>
       <div className="card">
         <h3 style={{ marginBottom: '2rem' }}>User Profile</h3>
-        
+
         {message.text && (
-          <div style={{ 
-            padding: '12px', 
-            borderRadius: '8px', 
+          <div style={{
+            padding: '12px',
+            borderRadius: '8px',
             marginBottom: '1.5rem',
             backgroundColor: message.type === 'success' ? '#d1fae5' : '#fee2e2',
             color: message.type === 'success' ? '#065f46' : '#991b1b',
@@ -62,10 +62,10 @@ const ProfilePage = () => {
         )}
 
         <div style={{ display: 'flex', gap: '2rem', marginBottom: '2rem' }}>
-          <img 
-            src={formData.photo || 'https://placehold.co/100'} 
-            alt="Profile" 
-            style={{ width: '100px', height: '100px', borderRadius: '50%', objectFit: 'cover', border: '4px solid var(--border)' }} 
+          <img
+            src={formData.photo || 'https://placehold.co/100'}
+            alt="Profile"
+            style={{ width: '100px', height: '100px', borderRadius: '50%', objectFit: 'cover', border: '4px solid var(--border)' }}
           />
           <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
             <h4 style={{ fontSize: '1.1rem', marginBottom: '4px' }}>{userInfo?.fullName}</h4>
@@ -79,14 +79,14 @@ const ProfilePage = () => {
             <label style={labelStyle}>Full Name</label>
             <input type="text" name="fullName" value={formData.fullName} onChange={handleChange} required style={inputStyle} />
           </div>
-          
+
           <div style={{ marginBottom: '1.25rem' }}>
             <label style={labelStyle}>Profile Photo</label>
-            <input 
-              type="file" 
-              accept="image/*" 
-              onChange={(e) => setPhotoFile(e.target.files?.[0] || null)} 
-              style={inputStyle} 
+            <input
+              type="file"
+              accept="image/*"
+              onChange={(e) => setPhotoFile(e.target.files?.[0] || null)}
+              style={inputStyle}
             />
           </div>
 
